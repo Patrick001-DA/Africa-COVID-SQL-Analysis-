@@ -1,3 +1,6 @@
+Describe africa_covid;
+select*
+from africa_covid;
 
 --  Case fatality rate Calculate: Total Deaths /Total Cases × 100 Display:country,total_cases,total_deaths case_fatality_rate
 
