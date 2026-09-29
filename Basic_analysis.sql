@@ -13,3 +13,18 @@ from africa_covid;
 
 select country,total_cases,total_recovered, total_recovered/total_cases*100 as recovery_rate
 from africa_covid;
+- Active case percentage Calculate: Active Cases / Total Cases × 100
+
+select*,active_cases/total_cases*100 as active_case_percentage
+from africa_covid;
+
+--  Tests per case Calculate:Total Tests / Total Cases
+
+select*, total_tests/total_cases as tests_per_case
+from africa_covid;
+
+-- Unresolved cases Calculate:Total Cases - Total Recovered - Total Deaths Compare the result with active_cases.
+
+select*,total_cases-total_recovered-total_deaths as unresolved_cases
+from africa_covid;
+
