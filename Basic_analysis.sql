@@ -27,4 +27,30 @@ from africa_covid;
 
 select*,total_cases-total_recovered-total_deaths as unresolved_cases
 from africa_covid;
+- Find the total COVID cases across all countries.
+select sum(total_cases)
+from africa_covid;
+
+-- Find the total deaths across all countries.
+select sum(total_deaths)
+from africa_covid;
+
+-- Find the average total cases per country.
+select avg(total_cases)
+from africa_covid;
+
+
+-- Find the country with the highest total cases.
+select*
+from africa_covid
+order by total_cases desc
+limit 1;
+
+-- Find the country with the lowest total cases.
+
+select*
+from africa_covid
+order by total_cases asc
+limit 1;
+-- Find the average deaths per 1 million population
 
