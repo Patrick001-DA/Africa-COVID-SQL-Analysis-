@@ -27,4 +27,8 @@ from case_fatality_rate ;
 select *, rank() over (order by cases_per_1m desc)
 from africa_covid
 limit 5;
+-- Rank countries by total cases using DENSE_RANK()
 
+select*,
+DENSE_RANK() over (order by total_cases desc)
+from africa_covid;
