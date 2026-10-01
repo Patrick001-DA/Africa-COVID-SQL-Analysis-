@@ -1,3 +1,18 @@
+
+-- For every country, display its total cases and the country with the highest total cases.
+SELECT
+    country,
+    total_cases,
+    FIRST_VALUE(country) OVER (
+        ORDER BY total_cases DESC
+    ) AS highest_case_country
+FROM africa_covid;
+
+
+
+
+
+
 -- Rank African countries by total COVID cases from highest to lowest.
 select *,
      rank() over (order by total_cases desc)as africa_covid_rank
